@@ -50,3 +50,8 @@ Methodology
 3. Configuration: Assign IP addresses to all computers to ensure they are on the same subnet and can communicate effectively within the network.
 4. Connectivity Testing: Use the `ping` command to verify that the network is functioning as intended. This step involves checking the reachability of each computer from others to confirm that the topology is correctly implemented.
 5. Analysis: Observe how each topology affects network performance and connectivity. Understand the advantages and disadvantages of each topology in different scenarios.
+
+
+
+Output:
+
