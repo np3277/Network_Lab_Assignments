@@ -1,0 +1,36 @@
+Aim:
+The objective of this exercise is to understand basic networking concepts using Cisco Packet Tracer, including setting up a simple network, configuring IP addresses, testing peer-to-peer communication, and learning about different types of network cables and their color codes.
+
+ Procedure
+
+ 1. Launch Packet Tracer
+- Open Cisco Packet Tracer on your computer.
+- Get acquainted with the Packet Tracer interface, focusing on the workspace, device options, and available tools.
+
+2. Construct a Basic Network
+- Drag and drop two computers (PC-PT) onto the workspace.
+- Add a switch (Switch-PT) to the workspace.
+- Use straight-through Ethernet cables to connect each computer to the switch.
+
+ 3. Configure IP Addresses
+- Select the first computer, navigate to the Desktop tab, and click on IP Configuration.
+- Set the IP address to 192.168.1.1 and the subnet mask to 255.255.255.0.
+- Repeat this process for the second computer, assigning it the IP address 192.168.1.2 with the same subnet mask.
+
+ 4. Verify Peer-to-Peer Connectivity
+- On the first computer, open the Command Prompt from the Desktop tab.
+- Execute the `ping` command to check connectivity to the second computer (e.g., `ping 192.168.1.2`).
+- Review the results to confirm successful communication between the two computers.
+
+ 5. Explore Network Cables and Color Codes
+- Inspect the different types of network cables available, such as Ethernet and crossover cables.
+- Identify and document the color codes for each wire within these cables:
+  - Straight-through Cable: Typically used to connect different types of devices, such as a computer to a switch.
+  - Crossover Cable: Generally used to connect similar devices directly, such as computer to computer.
+
+ Methodology
+1. Interface Familiarization: Begin by familiarizing yourself with Packet Tracer's interface to ensure ease of use throughout the exercise.
+2. Network Setup: Construct a basic network topology using appropriate devices and connections.
+3. IP Configuration: Assign IP addresses to each device to ensure they are on the same network and can communicate with each other.
+4. Connectivity Testing: Use network tools to verify that the devices can communicate correctly over the network.
+5. Cable Analysis: Examine and understand the various cables used in networking, including their color codes and applications.
