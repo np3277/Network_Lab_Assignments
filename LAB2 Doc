@@ -1,0 +1,52 @@
+Lab 2: Implementation of Network Topologies
+
+Objective
+The purpose of this lab is to implement and analyze different network topologies—bus, star, ring, and mesh—using Cisco Packet Tracer. You will create these topologies, configure the necessary connections, and test network connectivity to understand how each topology operates.
+
+Procedure
+
+1. Open Packet Tracer
+- Action: Launch Cisco Packet Tracer on your computer by locating the application in your programs menu and double-clicking to open it.
+- Purpose: This will bring up the Packet Tracer workspace where you can create and configure network topologies.
+
+2. Implement a Bus Topology
+- Action:
+  - Drag three computers (PC-PT) from the device list onto the workspace.
+  - Select a Coaxial Cable from the available network cables.
+  - Connect the three computers using a single Coaxial Cable that acts as the backbone of the bus topology. Ensure that the connections are made in a line, without branching.
+- Purpose: The bus topology uses a single central cable to which all computers are connected. This simple topology helps in understanding basic network connections.
+
+3. Implement a Star Topology
+- Action: 
+  - Drag three computers (PC-PT) and one switch (Switch-PT) onto the workspace.
+  - Use straight-through Ethernet cables to connect each computer to the switch. Connect one end of the cable to the Ethernet port of the computer and the other end to one of the switch’s ports.
+- Purpose: In the star topology, each computer is directly connected to a central switch. This setup helps in understanding how centralized network management operates.
+
+4. Implement a Ring Topology
+- Action:
+  - Drag three computers (PC-PT) onto the workspace.
+  - Use crossover cables to connect the computers in a circular manner. Connect the Ethernet port of the first computer to the second computer, the second computer to the third computer, and the third computer back to the first computer.
+- Purpose: The ring topology connects each computer to two other computers, forming a closed loop. This configuration is useful for understanding how data is transmitted around a loop.
+ 5. Implement a Mesh Topology
+- Action:
+  - Drag three computers (PC-PT) onto the workspace.
+  - Use crossover cables to connect each computer to every other computer. For example, connect Computer 1 to Computer 2, Computer 3 to Computer 1, and Computer 3 to Computer 2, creating a full mesh of connections.
+- Purpose: In the mesh topology, each computer is connected to every other computer in the network. This setup demonstrates how redundancy and fault tolerance work in a network.
+
+ 6. Test Connectivity
+- Action:
+  - For each topology, configure IP addresses on the computers:
+    - Select each computer, go to the Desktop tab, and click on IP Configuration.
+    - Assign a unique IP address and subnet mask to each computer (e.g., 192.168.1.1, 192.168.1.2, and 192.168.1.3 for the three computers).
+  - Open the Command Prompt on each computer and use the `ping` command to test connectivity:
+    - For example, on Computer 1, type `ping 192.168.1.2` and `ping 192.168.1.3` to check the connection to the other two computers.
+  - Observe the results to ensure that all computers in each topology can communicate successfully.
+- Purpose: Testing connectivity ensures that the network configuration is correct and that all devices can communicate with each other.
+
+Methodology
+
+1. Interface Familiarization: Begin by opening Cisco Packet Tracer and getting accustomed to the interface, including how to add and connect devices.
+2. Topology Construction: Sequentially build each of the four topologies (bus, star, ring, and mesh) by following the detailed steps provided. Ensure that each connection is correctly made according to the topology's requirements.
+3. Configuration: Assign IP addresses to all computers to ensure they are on the same subnet and can communicate effectively within the network.
+4. Connectivity Testing: Use the `ping` command to verify that the network is functioning as intended. This step involves checking the reachability of each computer from others to confirm that the topology is correctly implemented.
+5. Analysis: Observe how each topology affects network performance and connectivity. Understand the advantages and disadvantages of each topology in different scenarios.
