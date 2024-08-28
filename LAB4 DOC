@@ -1,0 +1,87 @@
+### Lab Report: IP Addressing and Subnetting (VLSM)
+
+Aim:
+The objective of this lab is to design a network topology using Cisco Packet Tracer, implement IP addressing and subnetting using Variable Length Subnet Mask (VLSM), configure the routers with the appropriate IP addresses, and test connectivity between the routers.
+
+Procedure
+1. Open Packet Tracer:
+   - Launch Cisco Packet Tracer on your computer.
+
+2. Design Network Topology:
+   - Create a network topology with three routers connected in a triangular fashion using Cisco Packet Tracer.
+
+3. Calculate Subnets Using VLSM:
+   - Determine the number of required subnets and host addresses.
+   - Divide the network into subnets using VLSM.
+
+4. Assign IP Addresses:
+   - Configure the interfaces of each router with the calculated IP addresses.
+   - Use the IP address scheme to assign addresses to each interface.
+
+5. Configure Interfaces:
+   - Access the Command Line Interface (CLI) of each router.
+   - Configure the IP addresses on each router interface.
+
+6. Test Connectivity:
+   - Use the `ping` command to test connectivity between the routers.
+
+Methodology
+
+1. Network Topology Design:
+   - Tool: Cisco Packet Tracer.
+   - Steps:
+     1. Open Cisco Packet Tracer.
+     2. Drag and drop three routers into the workspace.
+     3. Connect the routers using the "Connection" tool to form a triangular topology.
+
+2. VLSM Subnet Calculation:
+   - Step-by-Step Calculation:
+     1. Determine the number of required subnets:
+        - Three point-to-point links.
+     2. Assign IP blocks using VLSM:
+        - Router 1 to Router 2: 192.168.1.0/30
+        - Router 1 to Router 3: 192.168.1.4/30
+        - Router 2 to Router 3: 192.168.1.8/30
+     3. Calculate the usable IP addresses for each subnet:
+        - 192.168.1.0/30: 192.168.1.1 and 192.168.1.2
+        - 192.168.1.4/30: 192.168.1.5 and 192.168.1.6
+        - 192.168.1.8/30: 192.168.1.9 and 192.168.1.10
+
+3. IP Address Assignment:
+   - Router 1:
+     - Interface to Router 2: 192.168.1.1
+     - Interface to Router 3: 192.168.1.5
+   - Router 2:
+     - Interface to Router 1: 192.168.1.2
+     - Interface to Router 3: 192.168.1.9
+   - Router 3:
+     - Interface to Router 1: 192.168.1.6
+     - Interface to Router 2: 192.168.1.10
+
+4.Configuration of Router Interfaces:
+   - CLI Configuration Steps:
+     1. Access each router's CLI.
+     2. Enter privileged EXEC mode using `enable`.
+     3. Enter global configuration mode using `configure terminal`.
+     4. Configure the IP addresses for each interface:
+        - Example for Router 1's interface to Router 2:
+          bash
+          interface gig0/0
+          ip address 192.168.1.1 255.255.255.252
+          no shutdown
+        
+
+5. Testing Connectivity:
+   - Command: `ping`
+   - Example:
+     - On Router 1, ping Router 2 (192.168.1.2) and Router 3 (192.168.1.6) to verify successful communication.
+
+Output
+- Network Topology: A triangular network topology with three routers, each configured with the correct IP addresses using VLSM.
+- Ping Test Results: Successful ping responses between all routers, indicating proper configuration and connectivity.
+  - Router 1 to Router 2: Successful.
+  - Router 1 to Router 3: Successful.
+  - Router 2 to Router 3: Successful.
+
+Conclusion
+The lab successfully demonstrated the implementation of IP addressing and subnetting using VLSM in a network topology with three routers. The routers were correctly configured, and the network connectivity was verified through successful ping tests. This lab highlights the importance of efficient IP address management using VLSM in network design.
