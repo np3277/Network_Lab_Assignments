@@ -1,0 +1,97 @@
+Computer Networks – LAB 5: Static and Default 
+Routing 
+Objective: 
+• To configure static and default routing on routers using Cisco Packet Tracer. 
+• To establish communication between different network segments through proper routing 
+configurations. 
+• To test and verify successful data transfer and connectivity between PCs in different subnets 
+using the configured routes. 
+Requirements: 
+• Cisco Packet Tracer software. 
+• A GitHub account and a repository for lab assignments. 
+• Access to Google Classroom for submission 
+Procedure: 
+Network Design: 
+• Router1 connected to Router2. 
+• PC0 connected to Router1. 
+• PC1 connected to Router2. 
+Step 1: Configure Network Addresses 
+1. Determine IP address scheme: 
+• Router1 to Router2 link: 192.168.1.0/30 
+• PC0 Network: 192.168.10.0/24 
+• PC1 Network: 192.168.20.0/24 
+Step 2: Configuring Router1 
+1. Select Router1 and open CLI. 
+2. Press ENTER to start configuring Router1. 
+3. Activate privileged mode: 
+• Type enable 
+4. Access the configuration menu: 
+• Type config t (configure terminal) 
+5. Configure interfaces of Router1: 
+○ FastEthernet0/0 (connected to PC0): 
+• Type interface FastEthernet0/0 
+• Configure with the IP address 192.168.10.1 and Subnet mask 255.255.255.0 
+○ Serial0/0/0 (connected to Router2): 
+• Type interface Serial0/0/0 
+• Configure with the IP address 192.168.1.1 and Subnet mask 255.255.255.252 
+6. Activate interfaces: 
+• Type no shutdown 
+Step 3: Configuring Router2 
+1. Select Router2 and open CLI. 
+2. Press ENTER to start configuring Router2. 
+3. Activate privileged mode: 
+○ Type enable 
+4. Access the configuration menu: 
+○ Type config t (configure terminal) 
+5. Configure interfaces of Router2: 
+○ FastEthernet0/0 (connected to PC1): 
+■ Type interface FastEthernet0/0 
+■ Configure with the IP address 192.168.20.1 and Subnet mask 255.255.255.0 
+○ Serial0/0/0 (connected to Router1): 
+■ Type interface Serial0/0/0 
+■ Configure with the IP address 192.168.1.2 and Subnet mask 255.255.255.252 
+6. Activate interfaces: 
+• Type no shutdown 
+Step 4: Configuring PCs 
+1. Assign IP addresses to each PC: 
+○ PC0: 
+■ Go to the desktop, select IP Configuration, and assign the following: 
+■ IP address: 192.168.10.2 
+■ Subnet Mask: 255.255.255.0 
+■ Default Gateway: 192.168.10.1 
+○ PC1: 
+■ Go to the desktop, select IP Configuration, and assign the following: 
+■ IP address: 192.168.20.2 
+■ Subnet Mask: 255.255.255.0 
+■ Default Gateway: 192.168.20.1 
+Step 5: Static Routing Configuration 
+1. Configure static routes on Router1: 
+○ Access Router1 CLI and type the following commands: 
+■ ip route 192.168.20.0 255.255.255.0 192.168.1.2 
+2. Configure static routes on Router2: 
+○ Access Router2 CLI and type the following commands: 
+■ ip route 192.168.10.0 255.255.255.0 192.168.1.1 
+Step 6: Default Routing Configuration 
+1. Configure default route on Router1 (if Router1 needs to send packets to networks 
+outside its knowledge): 
+○ ip route 0.0.0.0 0.0.0.0 192.168.1.2 
+2. Configure default route on Router2 (if Router2 needs to send packets to networks 
+outside its knowledge): 
+○ ip route 0.0.0.0 0.0.0.0 192.168.1.1 
+Step 7: Verify Connectivity 
+1. Test the connectivity by pinging from PC0 to PC1: 
+○ Open the command prompt on PC0. 
+○ Type ping 192.168.20.2 and observe the response. 
+2. Test the connectivity by pinging from PC1 to PC0: 
+○ Open the command prompt on PC1. 
+○ Type ping 192.168.10.2 and observe the response. 
+Simulation of Designed Network Topology 
+Sending a PDU from PC0 to PC1 
+1. Open the simulation mode in Packet Tracer. 
+2. Send a PDU from PC0 to PC1: 
+○ Observe the packet traveling from PC0 to Router1, then Router2, and finally to 
+PC1. 
+Acknowledgment from PC1 to PC0 
+1. Observe the acknowledgment packet: 
+○ Ensure that the acknowledgment packet travels back from PC1 to PC0, confirming successful 
+communication.
